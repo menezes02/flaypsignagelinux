@@ -1,6 +1,6 @@
 # Offline Mode
 
-Flayp Signage Linux supports offline playback after at least one successful online collection.
+Flayp Linux Player for Xibo supports offline playback after at least one successful online collection.
 
 ## What Is Cached
 

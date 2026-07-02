@@ -1,13 +1,13 @@
 [package]
 name = "flaypsignagelinux"
-description = "Flayp Linux signage player for Flayp CMS"
+description = "Flayp Linux Player for Xibo CMS"
 version = "0.5.1"
 rust-version = "1.75"
 edition = "2021"
 authors = ["Flayp"]
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/felipeops/flaypsignagelinux"
-keywords = ["flayp", "signage", "qt"]
+repository = "https://github.com/menezes02/flaypsignagelinux"
+keywords = ["flayp", "xibo", "signage", "qt"]
 
 [[bin]]
 name = "flaypsignagelinux"

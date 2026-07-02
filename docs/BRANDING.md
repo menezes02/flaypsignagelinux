@@ -2,8 +2,8 @@
 
 ## Product Identity
 
-- Product name: `Flayp Signage`
-- Linux project name: `Flayp Signage Linux`
+- Product name: `Flayp Linux Player for Xibo`
+- Linux project name: `Flayp Linux Player for Xibo`
 - Binary name: `flaypsignagelinux`
 - Desktop file: `flaypsignagelinux.desktop`
 - Desktop icon name: `flaypsignagelinux`

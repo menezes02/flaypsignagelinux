@@ -27,7 +27,7 @@ Window::Window(QString base_uri, QScreen *screen, int inspect, callback cb, void
     if (inspect) {
         auto devtools_window = new QMainWindow();
         auto devtools = new QWebEngineView();
-        devtools_window->setWindowTitle("Flayp Signage Linux - Inspector");
+        devtools_window->setWindowTitle("Flayp Linux Player for Xibo - Inspector");
         devtools_window->setWindowIcon(QIcon(":/assets/logo.png"));
         devtools_window->setCentralWidget(devtools);
         devtools_window->resize(1000, 600);

@@ -1,17 +1,17 @@
-# Flayp Signage Linux
+# Flayp Linux Player for Xibo
 
 ![CI](https://github.com/menezes02/flaypsignagelinux/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue)
 ![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange)
 ![Qt](https://img.shields.io/badge/Qt-6%20WebEngine-41CD52)
 
-Flayp Signage Linux is a white-label Linux digital signage player built with Rust and Qt 6 WebEngine. It registers with a CMS, downloads scheduled layouts and media, caches content locally, and keeps playback running full-screen for Ubuntu desktop signage deployments.
+Flayp Linux Player for Xibo is a white-label Linux digital signage player built with Rust and Qt 6 WebEngine. It registers with a Xibo-compatible CMS, downloads scheduled layouts and media, caches content locally, and keeps playback running full-screen for Ubuntu desktop signage deployments.
 
 This repository is structured as a production-style signage player project: branded app assets, install scripts, offline playback support, CI checks, and documentation for build, deployment, and architecture.
 
 ## Highlights
 
-- Full-screen Linux signage playback using Qt 6 WebEngine.
+- Full-screen Linux signage playback for Xibo CMS using Qt 6 WebEngine.
 - Rust backend for registration, scheduling, media caching, commands, logging, and status collection.
 - Offline startup mode that uses cached settings, schedule, layouts, and media when the CMS is unavailable.
 - Ubuntu Desktop installer with per-user autostart, app launcher, single-instance lock, and persistent logs.
@@ -53,7 +53,7 @@ Run first-time registration against a CMS:
 ```sh
 mkdir -p ~/.local/share/flaypsignagelinux
 target/release/flaypsignagelinux \
-  --host https://cms.flayp.example/ \
+  --host https://xibo.example.com/ \
   --key YOUR_CMS_SECRET \
   ~/.local/share/flaypsignagelinux
 ```
@@ -71,7 +71,7 @@ The desktop installer builds the release binary, installs the icon, creates a pe
 ```sh
 cd app/flaypsignagelinux
 sudo TARGET_USER=$USER \
-  CMS_HOST=https://cms.flayp.example/ \
+  CMS_HOST=https://xibo.example.com/ \
   CMS_KEY='YOUR_CMS_SECRET' \
   sh packaging/install-ubuntu-desktop.sh
 ```

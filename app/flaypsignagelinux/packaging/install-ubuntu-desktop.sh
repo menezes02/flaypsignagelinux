@@ -4,10 +4,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH
 
 APP_NAME=flaypsignagelinux
-PRODUCT_NAME="Flayp Signage"
+PRODUCT_NAME="Flayp Linux Player for Xibo"
 PREFIX=${PREFIX:-/usr/local}
 TARGET_USER=${TARGET_USER:-${SUDO_USER:-}}
-CMS_HOST=${CMS_HOST:-https://cms.flayp.example/}
+CMS_HOST=${CMS_HOST:-https://xibo.example.com/}
 CMS_KEY=${CMS_KEY:-}
 INSTALL_DEPS=${INSTALL_DEPS:-1}
 REGISTER_NOW=${REGISTER_NOW:-1}

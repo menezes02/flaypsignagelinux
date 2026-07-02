@@ -1,4 +1,4 @@
-// Flayp Signage Linux implementation, (c) 2022-2024 Georg Brandl.
+// Flayp Linux Player for Xibo implementation, (c) 2022-2024 Georg Brandl.
 // Licensed under the GNU AGPL, version 3 or later.
 
 //! Definitions for the player configuration.
@@ -61,7 +61,7 @@ impl PlayerSettings {
 fn default_collect_interval() -> u64 { 900 }
 fn default_log_level() -> String { "debug".into() }
 fn default_embedded_server_port() -> u16 { 9696 }
-fn default_display_name() -> String { "Flayp Signage Linux".into() }
+fn default_display_name() -> String { "Flayp Linux Player for Xibo".into() }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CmsSettings {
@@ -185,7 +185,7 @@ mod tests {
         assert_eq!(s.collect_interval, 900);
         assert_eq!(s.log_level, "debug");
         assert_eq!(s.embedded_server_port, 9696);
-        assert_eq!(s.display_name, "Flayp Signage Linux");
+        assert_eq!(s.display_name, "Flayp Linux Player for Xibo");
         assert!(!s.stats_enabled);
         assert!(!s.prevent_sleep);
     }

@@ -1,6 +1,6 @@
 # Source Layout
 
-The Flayp Signage Linux application source lives in:
+The Flayp Linux Player for Xibo application source lives in:
 
 ```text
 app/flaypsignagelinux

@@ -1,6 +1,6 @@
 # Packaging
 
-This directory contains first-pass Linux deployment assets for Flayp Signage Linux.
+This directory contains first-pass Linux deployment assets for Flayp Linux Player for Xibo.
 
 ## Files
 
@@ -34,7 +34,7 @@ sudo CMS_KEY='your-cms-secret' sh packaging/install-ubuntu-desktop.sh
 Useful overrides:
 
 ```sh
-sudo TARGET_USER=vulcano CMS_HOST=https://cms.flayp.example/ CMS_KEY='your-cms-secret' sh packaging/install-ubuntu-desktop.sh
+sudo TARGET_USER=vulcano CMS_HOST=https://xibo.example.com/ CMS_KEY='your-cms-secret' sh packaging/install-ubuntu-desktop.sh
 ```
 
 The desktop installer creates a per-user autostart entry at `~/.config/autostart/flaypsignagelinux.desktop` and uses `~/.local/share/flaypsignagelinux` as the player data directory.

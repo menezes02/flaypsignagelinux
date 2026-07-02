@@ -1,5 +1,5 @@
 [Unit]
-Description=Flayp Signage Player
+Description=Flayp Linux Player for Xibo
 After=network-online.target graphical.target
 Wants=network-online.target
 

@@ -1,4 +1,4 @@
-// Flayp Signage Linux implementation, (c) 2022-2024 Georg Brandl.
+// Flayp Linux Player for Xibo implementation, (c) 2022-2024 Georg Brandl.
 // Licensed under the GNU AGPL, version 3 or later.
 
 //! Various utilities.
@@ -160,7 +160,7 @@ pub fn get_display_id() -> String {
 /// Generate an initial display name.  Tries the hostname.
 pub fn get_display_name() -> String {
     gethostname().ok().and_then(|s| s.into_string().ok())
-                      .unwrap_or_else(|| "Flayp Signage Display".into())
+                      .unwrap_or_else(|| "Flayp Linux Player for Xibo Display".into())
 }
 
 
@@ -173,7 +173,7 @@ const SS_METH: &str  = "Inhibit";
 pub fn inhibit_screensaver() -> Result<u32> {
     let conn = Connection::new_session().context("connecting to dbus")?;
     let proxy = conn.with_proxy(SS_SVC, SS_PATH, Duration::from_millis(500));
-    let res: (u32,) = proxy.method_call(SS_IFACE, SS_METH, ("Flayp Signage Linux", "Showing signage"))?;
+    let res: (u32,) = proxy.method_call(SS_IFACE, SS_METH, ("Flayp Linux Player for Xibo", "Showing signage"))?;
     Ok(res.0)
 }
 

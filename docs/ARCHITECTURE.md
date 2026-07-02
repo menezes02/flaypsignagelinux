@@ -1,6 +1,6 @@
 # Architecture
 
-Flayp Signage Linux is split into a Rust backend and a Qt 6 WebEngine frontend.
+Flayp Linux Player for Xibo is split into a Rust backend and a Qt 6 WebEngine frontend.
 
 ## Runtime Flow
 

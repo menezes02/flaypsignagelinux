@@ -1,10 +1,10 @@
-# Flayp Signage Linux
+# Flayp Linux Player for Xibo
 
-Flayp Signage Linux is a Linux digital signage player for Flayp CMS. It is
+Flayp Linux Player for Xibo is a Linux digital signage player for Xibo CMS. It is
 implemented mostly in Rust and uses Qt GUI components for Linux platforms.
 
 The player is intended for kiosk-style signage deployments where the device
-connects to a Flayp CMS, downloads scheduled content, caches media locally, and
+connects to a Xibo-compatible CMS, downloads scheduled content, caches media locally, and
 runs the display full screen.
 
 ## Installation
@@ -36,7 +36,7 @@ cargo libdbus-1-dev libzmq3-dev qt6-webengine-dev pkg-config`.
 
 ## Usage
 
-Create a new directory where Flayp Signage Linux can store configuration and
+Create a new directory where Flayp Linux Player for Xibo can store configuration and
 media files. Then, at first start, use the following command line to configure
 the player:
 
@@ -47,7 +47,7 @@ flaypsignagelinux --host <https://my.cms/> --key <key> <dir>
 Further configuration options are `--display-id` (normally auto-generated from
 machine characteristics), `--display-name`, and `--proxy`.
 
-Flayp Signage Linux caches the configuration in the directory, so future starts
+Flayp Linux Player for Xibo caches the configuration in the directory, so future starts
 only need:
 
 ```sh

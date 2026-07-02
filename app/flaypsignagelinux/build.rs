@@ -1,4 +1,4 @@
-// Flayp Signage Linux implementation, (c) 2022-2024 Georg Brandl.
+// Flayp Linux Player for Xibo implementation, (c) 2022-2024 Georg Brandl.
 // Licensed under the GNU AGPL, version 3 or later.
 
 //! Build script that processes the XMDS WSDL file into Rust code

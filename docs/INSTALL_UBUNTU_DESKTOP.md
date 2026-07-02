@@ -9,7 +9,7 @@ From the app directory:
 ```sh
 cd app/flaypsignagelinux
 sudo TARGET_USER=$USER \
-  CMS_HOST=https://cms.flayp.example/ \
+  CMS_HOST=https://xibo.example.com/ \
   CMS_KEY='YOUR_CMS_SECRET' \
   sh packaging/install-ubuntu-desktop.sh
 ```

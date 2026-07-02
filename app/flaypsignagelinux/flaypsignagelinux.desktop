@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=Flayp Signage
+Name=Flayp Linux Player for Xibo
 GenericName=Digital Signage Player
-Comment=Flayp Linux signage player for Flayp CMS
+Comment=Flayp Linux Player for Xibo CMS
 Exec=flaypsignagelinux
 Icon=flaypsignagelinux
 Terminal=false
 Categories=Utility;
-Keywords=signage;digital;kiosk;flayp;
+Keywords=signage;digital;kiosk;xibo;flayp;
 StartupNotify=true

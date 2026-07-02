@@ -1,4 +1,4 @@
-// Flayp Signage Linux implementation, (c) 2022-2024 Georg Brandl.
+// Flayp Linux Player for Xibo implementation, (c) 2022-2024 Georg Brandl.
 // Licensed under the GNU AGPL, version 3 or later.
 
 //! Main entry point for the application.
@@ -26,7 +26,7 @@ use clap::Parser;
 struct Args {
     /// The directory to place config files and cached content.
     envdir: PathBuf,
-    /// The CMS host including scheme, e.g. https://cms.flayp.example/
+    /// The CMS host including scheme, e.g. https://xibo.example.com/
     #[arg(long)]
     host: Option<String>,
     /// The CMS secret key.
@@ -41,7 +41,7 @@ struct Args {
     /// URL for a proxy server for HTTP/XMDS requests.
     #[arg(long)]
     proxy: Option<String>,
-    /// Specify the screen to show Flayp Signage Linux on.
+    /// Specify the screen to show Flayp Linux Player for Xibo on.
     /// Can be a number (starting from 1) or a name.  For a list of
     /// screens currently connected, pass "list".
     #[arg(long)]
@@ -85,7 +85,7 @@ fn main() {
 fn main_inner() -> anyhow::Result<()> {
     let args = Args::parse();
 
-    log::info!("Flayp Signage Linux {} starting up...", clap::crate_version!());
+    log::info!("Flayp Linux Player for Xibo {} starting up...", clap::crate_version!());
 
     if args.debug {
         log::set_max_level(log::LevelFilter::Debug);
