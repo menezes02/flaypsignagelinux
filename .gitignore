@@ -1,0 +1,27 @@
+# Rust / native build outputs
+app/flaypsignagelinux/target/
+app/flaypsignagelinux/gui/build/
+source/flaypsignagelinux/target/
+source/flaypsignagelinux/gui/build/
+
+# Runtime config, private keys, downloaded CMS content
+app/flaypsignagelinux/env*/
+source/flaypsignagelinux/env*/
+**/cms.json
+**/settings.json
+**/sched.json
+**/id_rsa
+**/xml/
+**/res/
+
+# Local logs and packaging scratch space
+*.log
+*.tmp
+*.deb
+*.buildinfo
+*.changes
+
+# Editor / OS files
+.DS_Store
+*.swp
+*~

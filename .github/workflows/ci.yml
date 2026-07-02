@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Rust tests and release build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            cmake \
+            g++ \
+            libdbus-1-dev \
+            libzmq3-dev \
+            qt6-webengine-dev \
+            libudev-dev \
+            pkg-config \
+            desktop-file-utils
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.75.0
+
+      - name: Validate desktop metadata
+        working-directory: app/flaypsignagelinux
+        run: desktop-file-validate flaypsignagelinux.desktop
+
+      - name: Validate installer scripts
+        working-directory: app/flaypsignagelinux
+        run: sh -n packaging/install.sh packaging/install-ubuntu-desktop.sh scripts/check-prereqs.sh
+
+      - name: Run tests
+        working-directory: app/flaypsignagelinux
+        run: cargo test --locked
+
+      - name: Build release
+        working-directory: app/flaypsignagelinux
+        run: cargo build --release --locked

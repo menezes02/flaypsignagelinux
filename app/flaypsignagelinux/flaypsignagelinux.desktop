@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Flayp Signage
+GenericName=Digital Signage Player
+Comment=Flayp Linux signage player for Flayp CMS
+Exec=flaypsignagelinux
+Icon=flaypsignagelinux
+Terminal=false
+Categories=Utility;
+Keywords=signage;digital;kiosk;flayp;
+StartupNotify=true

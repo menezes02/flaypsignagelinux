@@ -1,0 +1,15 @@
+[Unit]
+Description=Flayp Signage Player
+After=network-online.target graphical.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=flaypsignage
+Environment=NO_AT_BRIDGE=1
+ExecStart=/usr/bin/xinit /usr/local/bin/flaypsignagelinux /var/lib/flaypsignagelinux -- :1 vt8 -s 0 -v -dpms
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
